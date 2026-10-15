@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>隐私政策 Privacy Policy — 小账本 Little Ledger</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { max-width: 44em; margin: 3em auto; padding: 0 1.25em;
+         font: 16px/1.7 -apple-system,"Segoe UI",Roboto,"Noto Sans SC","Microsoft YaHei",sans-serif; }
+  h1 { font-size: 1.7em; }
+  h2 { font-size: 1.1em; margin-top: 2em; }
+  ul { padding-left: 1.2em; }
+  li { margin: .3em 0; }
+  a { color: #1a56c4; }
+  code { background: #f2f2f2; padding: .1em .35em; border-radius: 4px; font-size: .9em; }
+  .lang { border-top: 1px solid #ddd; margin-top: 3em; padding-top: 1.5em; }
+</style>
+</head>
+<body>
+
+<h1>隐私政策 <span lang="en">— Privacy Policy</span></h1>
+<p>适用于 Android 应用「小账本 / Little Ledger」。最后更新：2026 年 10 月。</p>
+
+<h2>一句话版本</h2>
+<p>我们<strong>不收集你的任何数据</strong>。这个应用没有账号系统、没有服务器、没有统计埋点、
+没有广告 SDK、也没有崩溃上报。你的账本数据只存在两个地方：<strong>你的手机</strong>，
+以及<strong>你自己的</strong> Google Drive 或 WebDAV 网盘（如果你开了同步的话）。</p>
+
+<h2>Google Drive：应用到底用它做什么</h2>
+<p>如果你在应用里选择用 Google Drive 做多设备同步，应用会申请一项权限：</p>
+<p><code>https://www.googleapis.com/auth/drive.file</code></p>
+<p>这一项的含义是「只能创建或修改<strong>本应用自己创建</strong>的文件」。具体到本应用：</p>
+<ul>
+  <li><strong>能访问什么</strong>：只访问它自己在你 Google Drive 里创建的那个文件夹
+      （默认名为「小账本」）及其内容 —— 也就是志账记录和照片。</li>
+  <li><strong>不能访问什么</strong>：你 Drive 里的其他任何文件，一概看不到、也读不到。
+      想确认这一点，可以在授权页看到权限说明只有「查看和管理本应用创建的文件」。</li>
+  <li><strong>数据传到哪</strong>：仅在你主动同步（或后台自动同步）时，
+      通过 HTTPS <strong>直连 Google 服务器</strong>。不经过任何第三方服务器或代理。</li>
+  <li><strong>用来做什么</strong>：只用于多设备同步，不用于任何其他目的。</li>
+  <li><strong>会共享吗</strong>：不会。我们没有可以用来共享的服务器，
+      也没有任何第三方合作方。</li>
+  <li><strong>long-term 凭据</strong>：应用会在你设备上的系统密钥库
+      （Android Keystore / EncryptedSharedPreferences）里保存 Google 返回的 refresh token，
+      以便后台同步时换取新的 access token。<strong>该凭据只存在于你的设备上</strong>，
+      不会离开设备。</li>
+</ul>
+
+<h2>怎么撤销和删除</h2>
+<ul>
+  <li>在应用内：设置 → 多设备同步 → Google Drive 配置 →「断开」，
+      会清掉本机的 refresh token。</li>
+  <li>在 Google 账号：<a href="https://myaccount.google.com/permissions">我的账号 → 第三方应用</a>
+      里撤销「小账本」的访问权限。</li>
+  <li>删除数据：直接删掉你 Drive 里那个「小账本」文件夹即可；
+      手机上的数据在卸载应用时随之删除。</li>
+</ul>
+
+<h2>WebDAV 同步（可选项）</h2>
+<p>如果你改用 WebDAV，网盘地址、账号和应用密码都是<strong>你自己填写</strong>的，
+密码只保存在设备上的系统密钥库里（Android Keystore），<strong>不会写入数据库、不会进日志</strong>，
+只在你填写的那个网盘与本机之间直连传输。</p>
+
+<h2>照片</h2>
+<p>你为账单拍摄的凭证照片默认只存在手机本地的应用私有目录里。
+如果你开启了同步，压缩后的副本会按<strong>内容哈希</strong>去重后存进你自己的网盘/Drive。
+应用不会读取相册的其他内容。</p>
+
+<h2>我们不包含的东西</h2>
+<p>没有账号注册；没有用户画像；没有统计埋点（不使用 Firebase Analytics 等）；
+没有广告 SDK；没有崩溃上报；没有聊天/客服系统；不读取通讯录、位置、短信、通话记录。</p>
+
+<h2>儿童</h2>
+<p>应用不面向 13 岁以下儿童，也不会有意收集儿童的数据。</p>
+
+<h2>政策变更</h2>
+<p>如果将来应用新增了需要获取 Google 数据权限的功能，我们会先更新这份政策再上线，
+并在应用内说明。本页面顶部会显示「最后更新」日期。</p>
+
+<div class="lang" lang="en">
+<h1>Privacy Policy</h1>
+<p>For the Android app "Little Ledger". Last updated: October 2026.</p>
+
+<h2>Short version</h2>
+<p lang="en">We do not collect your data. There is no account system, no server of ours,
+no analytics, no advertising SDK and no crash reporting. Your ledger data lives in exactly two
+places: <strong>your phone</strong>, and <strong>your own</strong> Google Drive or WebDAV storage
+if you enable sync.</p>
+
+<h2>Google Drive — what the app actually does with it</h2>
+<p lang="en">If you choose Google Drive for multi-device sync, the app requests a single scope:
+<code>https://www.googleapis.com/auth/drive.file</code>, i.e. "create or modify files that this app
+itself created". Concretely:</p>
+<ul lang="en">
+  <li><strong>Access:</strong> only the folder it created in your Drive (default name
+      "小账本") and its contents — the ledger records and photos.</li>
+  <li><strong>No access:</strong> nothing else in your Drive can be seen or read.</li>
+  <li><strong>Where data goes:</strong> only when you sync — over HTTPS, directly to Google.
+      No third-party server or proxy is involved.</li>
+  <li><strong>Sharing:</strong> none. We have no server to share from and no partners.</li>
+  <li><strong>Refresh token:</strong> stored only in your device's system keystore so background
+      sync can renew the access token. It never leaves your device.</li>
+</ul>
+
+<h2>Revoking and deleting</h2>
+<ul lang="en">
+  <li>In the app: Settings → Multi-device sync → Google Drive settings → "断开" (Disconnect),
+      which deletes the on-device refresh token.</li>
+  <li>In your Google Account, revoke access for "小账本".</li>
+  <li>Delete the data by deleting that "小账本" folder in Drive; on-phone data is removed
+      when you uninstall the app.</li>
+</ul>
+
+<h2>WebDAV sync (optional)</h2>
+<p lang="en">If you use WebDAV instead, the server URL, account and app password are entered by
+you. The password is kept only in the device keystore — it is never written to the database or to
+logs, and travels only between your device and the server you specified.</p>
+
+<h2>What the app does not contain</h2>
+<p lang="en">No account registration, no user profiling, no analytics SDK, no advertising SDK, no
+crash reporting, no customer-support chat. The app does not read contacts, location, SMS or call
+logs.</p>
+</div>
+
+</body>
+</html>
